@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Leaflet Web Map</title>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+<style>
+     #map {
+     width: 1500px;
+     height: 750px;
+     }
+</style>
+</head>
+<body>
+     <div id="map"></div>
+     <script> src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"</script>
+     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script>
+     var map = L.map('map',{
+        center: [-7.79558, 110.36949],
+        zoom: 12
+     });
+
+     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap </a> contributors'
+    }).addTo(map);
+    var marker = L.marker([-7.7639847, 110.3704093]).bindPopup('Teknik Geodesi UGM').
+    bindPopup('<center><h2>Teknik Geodesi UGM</h2><justify>Teknik Geodesi adalah disiplin ilmu yang mempelajari tentang pengukuran dan perepresentasian dari Bumi dan benda-benda langit lainnya, termasuk medan gaya beratnya masing-masing, dalam ruang tiga dimensi yang berubah dengan waktu. Sejak zaman dahulu, Ilmu Teknik Geodesi digunakan oleh manusia untuk keperluan navigasi. <br><br><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeodesi.ugm.ac.id%2Fprodi-sarjana-teknik-geodesi%2F&psig=AOvVaw3bcCyJ5ebwMpT6NDO-52lW&ust=1696921804980000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOj2yLy06IEDFQAAAAAdAAAAABAE" width="150px" height="100px"></center>').addTo(map);  
+    var marker = L.marker([-7.769970094996625, 110.37789034342754]).bindPopup('GSP').
+    bindPopup('<center><h2>Grha Sabha Pramana merupakan gedung pertemuan serbaguna milik Universitas Gadjah Mada yang pengelolaannya diserahkan kepada UGM Residence pada bulan Maret 2015. Gedung dengan atap joglo ini dibangun pada tahun 1994 dan diresmikan saat Dies Natalis UGM ke-46 pada tanggal 19 Desember 1995. Gedung ini berfungsi sebagai sentra kegiatan akademik, seperti wisuda, seminar/workshop dan non akademik, seperti pertunjukan musik, seni dan acara pernikahan.<br><br><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fresidence.ugm.ac.id%2Fgsp%2F&psig=AOvVaw10EFcTwSMyNwQ-coehHe3-&ust=1696922318365000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIjBoLG26IEDFQAAAAAdAAAAABAE" width="150px" height="100px"></center>').addTo(map);  
+    var marker = L.marker([-7.769223577687995, 110.37812416778681]).bindPopup('Perpustakaan UGM').
+    bindPopup('<center><h2>Perpustakaan UGM merupakan unit penunjang Universitas yang mempunyai tugas pokok mendukung proses pembelajaran, penelitian dan pengabdian kepada masyarakat bagi civitas academica di lingkungan Universitas Gadjah Mada.<br><br><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flib.ugm.ac.id%2Fsejarah%2F&psig=AOvVaw2ZlBR4fC9JvcwEBL8JmScH&ust=1696922678771000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCMit236IEDFQAAAAAdAAAAABAJ" width="150px" height="100px"></center>').addTo(map);  
+    var marker = L.marker([-7.768957576930328, 110.38309510049369]).bindPopup('Wisdom Park UGM').
+    bindPopup('<center><h2>Taman Kearifan berlokasi di bagian timur kampus utama. Yang merupakan bagian dari area terbuka hijau milik UGM termasuk fasilitas olahraga di dalam dan luar ruangan, lintasan joging, sebuah terowongan ikonis sebagai penghubung utara dan selatan taman, sebuah kolam tampungan sebagai fasilitas pencegah banjir, konservasi lahan, area bercocok tanam perkotaan, aneka fasilitas rekreasi, ruang rapat dan restoran, serta sistem air siap minum, yang akan menyuplai seluruh kampus UGM, baik melalui jaringan pipa maupun pengantaran ke unit-unit.<br><br><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mengimla.com%2F2018%2F12%2Ftaman-lembah-ugm.html&psig=AOvVaw1L2nQVcf5civv1U4hjt7Y6&ust=1696922714872000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOClou636IEDFQAAAAAdAAAAABAE" width="150px" height="100px"></center>').addTo(map);  
+    var marker = L.marker([-7.769043383638411, 110.38472321084537]).bindPopup('Stadion Pancasila').
+    bindPopup('<center><h2>Stadion Pancasila merupakan salah satu fasilitas olahraga yang terdapat di komplek Lembah UGM. Di dalam stadion ini terdapat lapangan sepak bola yang dapat dipakai oleh siapa saja, baik civitas akademika UGM maupun masyarakat umum.Selain lapangan sepak bola, juga terdapat lintasan lari yang digunakan untuk olahraga lari atau olahraga atletik lainnya. Bangunan ini umurnya sudah lebih dari 10 tahun dan sebenarnya konstruksi bangunannya belum terselesaikan.<br><br><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fditmawa.ugm.ac.id%2Ffasilitas-kemahasiswaan%2F&psig=AOvVaw1nLcFa0V-qlRk4Lsvyv6NC&ust=1696922873238000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPicu8e46IEDFQAAAAAdAAAAABAE" width="150px" height="100px"></center>').addTo(map);  
+    </script>
+</body>
+</html>
+
+
+
+
